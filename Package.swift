@@ -28,6 +28,12 @@ let package = Package(
             .target(name: "Point"),
             .product(name: "Tagged", package: "swift-tagged"),
         ]),
+        .testTarget(name: "Point Affine Tests", dependencies: [
+            .target(name: "Point"),
+            .product(name: "Affine", package: "swift-affine", condition: .when(traits: ["Affine"])),
+            .product(name: "Displacement", package: "swift-displacement", condition: .when(traits: ["Affine"])),
+            .product(name: "Coordinate", package: "swift-coordinate", condition: .when(traits: ["Affine"])),
+        ]),
     ],
     swiftLanguageModes: [.v6]
 )
