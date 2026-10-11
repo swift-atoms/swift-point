@@ -5,7 +5,7 @@ public import Displacement
 
 extension Point {
 
-    public func coordinateSystem<DisplacementScalar, Failure: Swift.Error>(
+    public func coordinateSystem<DisplacementScalar, Failure: Swift::Error>(
         using affine: Affine<Self, Displacement<N, DisplacementScalar>, Failure>
     ) -> Coordinate<N, DisplacementScalar>.System<Self, Failure> {
         .init(

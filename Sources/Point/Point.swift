@@ -4,6 +4,9 @@ public struct Point<let N: Int, Scalar> {
     public let coordinates: Vector<N, Scalar>
 
     public init(coordinates: Vector<N, Scalar>) { self.coordinates = coordinates }
+}
+
+extension Point {
     public subscript(index: Int) -> Scalar { coordinates[index] }
 }
 
