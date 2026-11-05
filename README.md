@@ -5,5 +5,5 @@ Use this package when a fixed-dimension tuple of scalars means a position: a pla
 ## Laws
 
 - A `Point<N, Scalar>` carries no frame or domain of its own: two points with equal components are equal and hash alike whatever space they were meant for. Domain identity comes only from a `Tagged` wrapper.
-- `Point<N, Scalar>.cartesian` is componentwise: the displacement from a start to an end is end minus start in every component, translating adds the displacement in every component, and translating a start by its displacement to an end reaches that end.
+- `Point<N, Scalar>.cartesian` is componentwise: the displacement from a start to an end is end minus start in every component, translating adds the displacement in every component, and translating a start by its displacement to an end reaches that end when `Scalar` arithmetic is exact. With floating-point scalars it can miss by rounding.
 - `coordinateSystem(using:)` makes the receiving point the origin: the coordinates of a point are the given affine's displacement from the origin to it, the point at given coordinates is the origin translated by them, and the origin itself sits at the zero coordinate. A failure of the affine relation passes through unchanged.
