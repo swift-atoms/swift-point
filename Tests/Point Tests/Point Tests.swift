@@ -9,7 +9,7 @@ private final class LocalScalar {}
 @Suite struct `Points preserve representation and domain identity` {
     private func dimension<let N: Int>(_ type: Vector<N, Int>.Type) {
         let point = Point(coordinates: Vector<N, Int>(InlineArray { $0 }))
-        for i in 0..<N { #expect(point[i] == i) }
+        (0..<N).forEach { i in #expect(point[i] == i) }
         #expect(Set([point, point]).count == 1)
     }
     @Test func `Points preserve components in one two three and eight dimensions`() {
