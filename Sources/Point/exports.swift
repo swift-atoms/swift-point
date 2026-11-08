@@ -5,9 +5,3 @@
     @_exported public import Coordinate
     @_exported public import Displacement
 #endif
-
-#if Affine
-    public import Affine
-    public import Coordinate
-    public import Displacement
-#endif
