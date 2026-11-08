@@ -5,9 +5,9 @@
     import Point
     import Testing
 
-enum `Point Cartesian Tests` {}
+    enum `Point Cartesian Tests` {}
 
-extension `Point Cartesian Tests` {
+    extension `Point Cartesian Tests` {
         @Suite struct `Cartesian points translate and subtract componentwise` {
             @Test func `Displacement between points is the componentwise difference`() {
                 let start = Point(x: 1, y: 2)
@@ -30,5 +30,5 @@ extension `Point Cartesian Tests` {
                 #expect(system.point(at: Coordinate(components: Vector(x: 1, y: -1))) == Point(x: 6, y: 4))
             }
         }
-}
+    }
 #endif
