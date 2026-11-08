@@ -1,4 +1,4 @@
-@_exported public import Vector
+public import Vector
 
 public struct Point<let N: Int, Scalar> {
     public let coordinates: Vector<N, Scalar>
