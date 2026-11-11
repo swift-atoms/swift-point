@@ -4,6 +4,7 @@
 
     extension Point where Scalar: AdditiveArithmetic {
 
+        @inlinable
         public static var cartesian: Affine<Self, Displacement<N, Scalar>, Never> {
             .componentwise(
                 coordinates: { $0.coordinates },
